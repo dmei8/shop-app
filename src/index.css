@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Harlow Solid";
-  src: url("C:/Windows/Fonts/HARLOWSI.TTF") format("truetype")
+  src: url("C:/Users/dongm/AppData/Local/Microsoft/Windows/Fonts/HARLOWSI.TTF") format("truetype")
 }
 
 * {
@@ -13,7 +13,10 @@ body {
 }
 
 .top-bar {
-  height: 50px;
+  height: 55px;
+  width: 100vw;
+  position: fixed;
+  background-color: white;
 }
 
 .top-bar ul {
@@ -53,6 +56,7 @@ body {
   width: 340px;
   height: 238px;
   margin-left: 10px;
+  margin-top: 55px;
 }
 
 .headings {
@@ -130,9 +134,169 @@ body {
 .shoe ul li {
   display: inline-block;
   margin-right: 5px;
+  margin-bottom: 10px;
 }
 
 .shoe ul li div {
   width: 15px;
   height: 15px;
+}
+
+.featured {
+  position: relative;
+}
+
+.featured img {
+  width: 328px;
+  height: 344px;
+  margin-top: 10px;
+}
+
+.featured button {
+  background-color: white;
+  color: black;
+  position: absolute;
+  left: 25px;
+  bottom: 10px;
+}
+
+.category-btn {
+  width: 156px;
+  height: 43px;
+  border: 1px solid black;
+  background-color: white;
+  margin: 8px 10px;
+  font-family: 'Khula';
+  font-weight: 700;
+}
+
+.special-deal {
+  text-align: start;
+  height: 320px;
+}
+
+.special-deal-img {
+  width: 206px;
+  height: 258px;
+  float: left;
+  margin-top: 10px;
+  margin-left: 13px;
+}
+
+.special-deal-text {
+  margin-left: 230px;
+}
+
+.special-deal-text h3 {
+  font-family: 'Khula';
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 0;
+  margin-top: 30px;
+}
+
+.special-deal-text p {
+  font-family: 'Lato';
+  font-size: 12px;
+  line-height: 14px;
+  width: 90px;
+  margin-top: 5px;
+}
+
+.special-deal-text h2 {
+  font-family: 'Khula';
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.old-price {
+  text-decoration: line-through;
+  margin-top: 25px !important;
+  margin-bottom: 0;
+}
+
+.btn-deal {
+  margin-left: 0;
+}
+
+.footer {
+  width: 100vw;
+  height: 251px;
+  background-color: black;
+}
+
+.footer-title {
+  color: white;
+  width: 100%;
+  text-align: start;
+  font-family: 'Khula';
+  font-size: 20px;
+  font-weight: 700;
+  padding: 20px 0px 0px 30px;
+  margin: 0;
+}
+
+.footer-links {
+  list-style-type: none;
+  color: white;
+  display: flex;
+  flex-flow: column wrap;
+  width: 210px;
+  height: 96px;
+  padding-left: 30px;
+  float: left;
+}
+
+.footer-links li {
+  font-family: 'Khula';
+  font-weight: 400;
+  text-align: start;
+  width: 104px;
+  line-height: 23px;
+  float: left;
+}
+
+.footer-social {
+  width: 100px;
+  float: left;
+  padding: 0;
+}
+
+.footer-social li {
+  width: 22px;
+  float: left;
+  margin-right: 10px;
+}
+
+.footer-social li img {
+  width: 22px;
+  height: 22px;
+}
+
+.footer-location {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: 30px;
+}
+
+.footer-location img {
+  width: 10px;
+  height: 12px;
+  margin-right: 8px;
+}
+
+.footer-location h3 {
+  font-family: 'Roboto';
+  font-size: 10px;
+  color: white;
+}
+
+.copyright {
+  font-family: 'Roboto';
+  font-size: 12px;
+  color: #BFBFBF;
+  text-align: start;
+  padding-left: 30px;
+  margin: 0;
 }
