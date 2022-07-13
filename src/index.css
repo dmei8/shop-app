@@ -3,6 +3,10 @@
   src: url("C:/Users/dongm/AppData/Local/Microsoft/Windows/Fonts/HARLOWSI.TTF") format("truetype")
 }
 
+.App {
+  overflow-x: hidden;
+}
+
 * {
   font-family: "Lato";
   font-weight: 400;
@@ -17,6 +21,7 @@ body {
   width: 100vw;
   position: fixed;
   background-color: white;
+  z-index: 999;
 }
 
 .top-bar ul {
@@ -30,8 +35,10 @@ body {
 }
 
 .title {
-  margin-left: 85px;
-  margin-right: 70px;
+  /*margin-left: 85px;
+  margin-right: 70px;*/
+  margin-left: calc(50vw - 110px);
+  margin-right: calc(50vw - 100px);
 }
 
 .title h1 {
@@ -40,9 +47,7 @@ body {
   font-size: 24px;
 }
 
-.menu-bar,
-.shopping-bag,
-.search-bar {
+.top-bar ul li img {
   width: 27px;
   height: 27px;
 }
@@ -53,8 +58,11 @@ body {
 }
 
 .slogan-img {
-  width: 340px;
+  /*width: 340px;
   height: 238px;
+  margin-left: 10px;
+  margin-top: 55px;*/
+  width: calc(100vw - 30px);
   margin-left: 10px;
   margin-top: 55px;
 }
@@ -65,20 +73,20 @@ body {
   font-weight: 700;
   line-height: 23px;
   text-align: start;
-  width: 256px;
-  margin-left: 13px;
-  margin-top: 25px;
-  margin-bottom: 3px;
   clear: both;
+  /*width: 256px;
+  margin-left: 13px;*/
+  margin: 25px 0 3px 18px;
+  width: 65vw;
 }
 
 .intro p {
   font-family: "Lato";
   font-size: 12px;
-  width: 236px;
+  width: 65vw;
   line-height: 14px;
   text-align: start;
-  margin-left: 13px;
+  margin-left: 18px;
   margin-top: 10px;
 }
 
@@ -90,16 +98,25 @@ body {
   background-color: black;
   color: white;
   float: left;
-  margin-left: 13px;
+  margin-left: 18px;
   margin-top: 10px;
   margin-bottom: 20px;
 }
 
 .shoe {
   list-style-type: none;
+  /*display: table;
+  width: 45%;
+  table-layout: fixed;*/
   float: left;
   padding: 0;
-  margin-left: 13px;
+}
+
+.shoe li {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  margin-left: 18px;
 }
 
 .shoe-name,
@@ -109,6 +126,12 @@ body {
   text-align: start;
   margin-top: 7px;
   margin-bottom: 0;
+}
+
+.shoe-name,
+.shoe-for,
+.shoe-price {
+  width: 155px;
 }
 
 .shoe-for {
@@ -122,8 +145,8 @@ body {
 }
 
 .shoe-img{
-  width: 155px;
-  height: 155px;
+  width: 42vw;
+  margin-right: 2vw;
 }
 
 .shoe ul {
@@ -133,8 +156,8 @@ body {
 
 .shoe ul li {
   display: inline-block;
-  margin-right: 5px;
-  margin-bottom: 10px;
+  margin: 0 5px 10px 0;
+  width: 15px;
 }
 
 .shoe ul li div {
@@ -147,21 +170,25 @@ body {
 }
 
 .featured img {
-  width: 328px;
-  height: 344px;
+  /*width: 328px;
+  height: 344px;*/
+  width: 90vw;
   margin-top: 10px;
+  /**/
 }
 
 .featured button {
   background-color: white;
   color: black;
   position: absolute;
-  left: 25px;
-  bottom: 10px;
+  left: 7vw;
+  bottom: 2%;
 }
 
 .category-btn {
-  width: 156px;
+  /*width: 156px;
+  height: 43px;*/
+  width: 44vw;
   height: 43px;
   border: 1px solid black;
   background-color: white;
@@ -172,19 +199,21 @@ body {
 
 .special-deal {
   text-align: start;
-  height: 320px;
+  height: auto;
+  overflow: visible;
+  margin-bottom: 15px;
 }
 
 .special-deal-img {
-  width: 206px;
-  height: 258px;
+  /*width: 206px;
+  height: 258px;*/
+  width: 55vw;
   float: left;
-  margin-top: 10px;
-  margin-left: 13px;
+  margin: 10px 15px 20px 18px;
 }
 
 .special-deal-text {
-  margin-left: 230px;
+  float: left;
 }
 
 .special-deal-text h3 {
@@ -223,6 +252,7 @@ body {
   width: 100vw;
   height: 251px;
   background-color: black;
+  clear: both;
 }
 
 .footer-title {
@@ -299,4 +329,44 @@ body {
   text-align: start;
   padding-left: 30px;
   margin: 0;
+}
+
+
+@media only screen and (max-device-width: 345px) {
+  .shoe-img {
+    width: 88vw;
+  }
+
+  .featured button {
+    bottom: 1vh;
+  }
+
+  .shop-by-category h1 {
+    width: 100%;
+  }
+
+  .category-btn {
+    width: 90vw;
+  }
+
+  .footer {
+    height: 270px;
+  }
+
+  .footer-links {
+    margin: 10px 0;
+    font-size: 12px;
+  }
+
+  .footer-social {
+    margin: 0 0 0 30px;
+  }
+
+  .footer-location {
+    padding-top: 10px;
+  }
+
+  .copyright {
+    font-size: 10px;
+  }
 }

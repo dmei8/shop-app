@@ -6,15 +6,15 @@ const TopBar = () => {
   return (
     <div className='top-bar'>
         <ul>
-            <li>
-              <img className='menu-bar' src={menu}></img>
+            <li className='menu-bar'>
+              <img src={menu}></img>
             </li>
             <li className='title'><h1>SHOOS</h1></li>
-            <li>
-              <img className='shopping-bag' src={shopping_bag}></img>
+            <li className='shopping-bag'>
+              <img src={shopping_bag}></img>
             </li>
-            <li>
-              <img className='search-bar' src={search}></img>
+            <li className='search-bar'>
+              <img src={search}></img>
             </li>
         </ul>
     </div>

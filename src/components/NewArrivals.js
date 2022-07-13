@@ -18,7 +18,7 @@ const NewArrivals = () => {
         </ul>
         <ul className='shoe'>
             <li><img img className='shoe-img' src={blue_shoe}></img></li>
-            <li><h3 className='shoe-name'>Bouncec</h3></li>
+            <li><h3 className='shoe-name'>Bounce</h3></li>
             <li><p className='shoe-for'>Men's</p></li>
             <li><h3 className='shoe-price'>$120</h3></li>
             <ul>
