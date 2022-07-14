@@ -10,11 +10,11 @@ const TopBar = () => {
               <img src={menu}></img>
             </li>
             <li className='title'><h1>SHOOS</h1></li>
-            <li className='shopping-bag'>
-              <img src={shopping_bag}></img>
-            </li>
             <li className='search-bar'>
               <img src={search}></img>
+            </li>
+            <li className='shopping-bag'>
+              <img src={shopping_bag}></img>
             </li>
         </ul>
     </div>

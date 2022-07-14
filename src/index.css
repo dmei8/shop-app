@@ -14,37 +14,36 @@
 
 body {
   margin: 0;
+  padding: 0;
 }
+
+/* TOP BAR */
 
 .top-bar {
   height: 55px;
-  width: 100vw;
+  width: 100%;
   position: fixed;
   background-color: white;
-  z-index: 999;
+  z-index: 1;
+}
+
+.top-bar.active {
+  box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
 }
 
 .top-bar ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  margin-block: 0;
+  margin-inline: 0;
+  padding-inline: 0;
 }
 
 .top-bar ul li {
   display: inline-block;
-}
-
-.title {
-  /*margin-left: 85px;
-  margin-right: 70px;*/
-  margin-left: calc(50vw - 110px);
-  margin-right: calc(50vw - 100px);
-}
-
-.title h1 {
-  font-family: "Khula";
-  font-weight: 700;
-  font-size: 24px;
+  height: 55px;
+  margin-top: 14px;
 }
 
 .top-bar ul li img {
@@ -52,19 +51,39 @@ body {
   height: 27px;
 }
 
-.menu-bar,
-.shopping-bag {
-  margin-right: 8px;
+.menu-bar {
+  width: 60px;
+  float: left;
+  margin-left: 20px;
+  text-align: start;
 }
 
-.slogan-img {
-  /*width: 340px;
-  height: 238px;
-  margin-left: 10px;
-  margin-top: 55px;*/
-  width: calc(100vw - 30px);
-  margin-left: 10px;
-  margin-top: 55px;
+.title {
+  height: 27px;
+  margin: 0;
+}
+
+.title h1 {
+  font-family: "Khula";
+  font-weight: 700;
+  font-size: 24px;
+  margin: 0;
+}
+
+.shopping-bag {
+  float: right;
+  margin-right: 6px;
+}
+
+.search-bar {
+  float: right;
+  margin-right: 20px;
+}
+
+/* CONTENT */
+
+.container {
+  margin: 0 20px;
 }
 
 .headings {
@@ -74,10 +93,14 @@ body {
   line-height: 23px;
   text-align: start;
   clear: both;
-  /*width: 256px;
-  margin-left: 13px;*/
-  margin: 25px 0 3px 18px;
+  margin: 20px 0 3px 0;
   width: 65vw;
+}
+
+/* SITE INTRO */
+
+.intro {
+  overflow: hidden;
 }
 
 .intro p {
@@ -86,8 +109,12 @@ body {
   width: 65vw;
   line-height: 14px;
   text-align: start;
-  margin-left: 18px;
   margin-top: 10px;
+}
+
+.slogan-img {
+  width: 100%;
+  margin-top: 55px;
 }
 
 .btn {
@@ -98,25 +125,33 @@ body {
   background-color: black;
   color: white;
   float: left;
-  margin-left: 18px;
   margin-top: 10px;
   margin-bottom: 20px;
 }
 
+/* TRENDING STYLES */
+
+.trending {
+  overflow: hidden;
+}
+
+.shoes {
+  display: flex;
+  justify-content: space-between;
+}
+
 .shoe {
   list-style-type: none;
-  /*display: table;
-  width: 45%;
-  table-layout: fixed;*/
-  float: left;
   padding: 0;
 }
 
+.shoe-2 {
+  text-align: end;
+}
 .shoe li {
   width: 100%;
   display: flex;
   align-items: start;
-  margin-left: 18px;
 }
 
 .shoe-name,
@@ -146,7 +181,6 @@ body {
 
 .shoe-img{
   width: 42vw;
-  margin-right: 2vw;
 }
 
 .shoe ul {
@@ -156,7 +190,7 @@ body {
 
 .shoe ul li {
   display: inline-block;
-  margin: 0 5px 10px 0;
+  margin: 0 0 10px 5px;
   width: 15px;
 }
 
@@ -165,16 +199,22 @@ body {
   height: 15px;
 }
 
+/* NEW ARRIVALS */
+
+.new-arrivals {
+  overflow: hidden;
+}
+
+/* FEATURED */
+
 .featured {
   position: relative;
+  overflow-x: hidden;
 }
 
 .featured img {
-  /*width: 328px;
-  height: 344px;*/
   width: 90vw;
   margin-top: 10px;
-  /**/
 }
 
 .featured button {
@@ -185,31 +225,41 @@ body {
   bottom: 2%;
 }
 
+/* SHOP BY CATEGORY */
+
+.shop-by-category {
+  overflow: hidden;
+}
+
 .category-btn {
-  /*width: 156px;
-  height: 43px;*/
-  width: 44vw;
+  width: 42vw;
   height: 43px;
+  margin: 8px 0;
   border: 1px solid black;
   background-color: white;
-  margin: 8px 10px;
   font-family: 'Khula';
   font-weight: 700;
 }
 
+.cbtn-1 {
+  float: left;
+}
+
+.cbtn-2 {
+  float: right;
+}
+
+/* SPECIAL DEAL */
+
 .special-deal {
   text-align: start;
-  height: auto;
-  overflow: visible;
-  margin-bottom: 15px;
+  overflow: hidden;
 }
 
 .special-deal-img {
-  /*width: 206px;
-  height: 258px;*/
   width: 55vw;
   float: left;
-  margin: 10px 15px 20px 18px;
+  margin: 10px 15px 20px 0;
 }
 
 .special-deal-text {
@@ -248,11 +298,12 @@ body {
   margin-left: 0;
 }
 
+/* FOOTER */
+
 .footer {
-  width: 100vw;
+  width: 100%;
   height: 251px;
   background-color: black;
-  clear: both;
 }
 
 .footer-title {
@@ -331,6 +382,15 @@ body {
   margin: 0;
 }
 
+@media only screen and (width: 320px) {
+  .special-deal-img {
+    width: 60%;
+  }
+
+  .special-deal h3 {
+    margin-top: 20px;
+  }
+}
 
 @media only screen and (max-device-width: 345px) {
   .shoe-img {
@@ -346,7 +406,8 @@ body {
   }
 
   .category-btn {
-    width: 90vw;
+    width: 100%;
+    float: none;
   }
 
   .footer {
